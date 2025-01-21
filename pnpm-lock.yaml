@@ -6,7 +6,14 @@ settings:
 
 importers:
 
-  .: {}
+  .:
+    dependencies:
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
 
   apps/shell:
     dependencies:
@@ -14,11 +21,14 @@ importers:
         specifier: workspace:*
         version: link:../../packages/utils
       react:
-        specifier: ^18.3.1
+        specifier: '*'
         version: 18.3.1
       react-dom:
-        specifier: ^18.3.1
+        specifier: '*'
         version: 18.3.1(react@18.3.1)
+      vite-plugin-federation:
+        specifier: ^0.0.1
+        version: 0.0.1
     devDependencies:
       '@eslint/js':
         specifier: ^9.17.0
@@ -930,6 +940,9 @@ packages:
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
 
+  vite-plugin-federation@0.0.1:
+    resolution: {integrity: sha512-qwCUtAbS/T1v50y98zd/3fLrCprlSL9h2vIgDi/Fi7JztTNt2FigcAkA/eml05zlADAXivh4Y59UM3yyK4mm+w==}
+
   vite@6.0.11:
     resolution: {integrity: sha512-4VL9mQPKoHy4+FE0NnRE/kbY51TOfaknxAjt3fJbGJxhIpBZiqVzlZDEesWWsuREXHwNdAoOFZ9MkPEVXczHwg==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
@@ -1761,6 +1774,8 @@ snapshots:
   uri-js@4.4.1:
     dependencies:
       punycode: 2.3.1
+
+  vite-plugin-federation@0.0.1: {}
 
   vite@6.0.11:
     dependencies:
