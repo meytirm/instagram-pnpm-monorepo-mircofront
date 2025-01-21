@@ -11,9 +11,9 @@
   },
   "dependencies": {
     "@mono/utils": "workspace:*",
+    "@originjs/vite-plugin-federation": "^1.3.9",
     "react": "*",
-    "react-dom": "*",
-    "vite-plugin-federation": "^0.0.1"
+    "react-dom": "*"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
