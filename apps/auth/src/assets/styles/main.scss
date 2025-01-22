@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.carousel-wrapper {
+  height: 581.15px;
+   background: url("../../../public/phone-frame.png") no-repeat;
+   background-size: 468.32px 634.15px;
+}

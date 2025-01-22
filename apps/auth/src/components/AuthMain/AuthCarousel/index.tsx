@@ -1,5 +1,5 @@
 function AuthCarousel() {
-  return <div>auth Carousel</div>
+  return <div className="carousel-wrapper"></div>
 }
 
 export default AuthCarousel
