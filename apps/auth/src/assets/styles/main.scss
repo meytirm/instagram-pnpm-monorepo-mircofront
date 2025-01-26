@@ -2,8 +2,81 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --strok: 219, 219, 219;
+  --focus-strok: 168, 168, 168;
+  --secodary-background: 250, 250, 250;
+  --secondary-text: 115, 115, 115;
+}
+
+input:focus {
+  outline: none;
+}
+
+.auth-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .carousel-wrapper {
   height: 581.15px;
-   background: url("../../../public/phone-frame.png") no-repeat;
-   background-size: 468.32px 634.15px;
+  background: url("../../../public/phone-frame.png") no-repeat;
+  background-size: 468.32px 634.15px;
+  flex-basis: 468.32px;
+  position: relative;
+}
+
+.slideshow {
+  width: 250px;
+  height: 541px;
+  margin-top: 27px;
+  position: absolute;
+  overflow: hidden;
+  right: 59px;
+
+  &__slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+
+    &--active {
+      opacity: 1; /* Make the active image visible */
+    }
+  }
+}
+
+.login-form {
+  border: 1px solid rgb(var(--strok));
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bordered-input {
+  border: 1px solid rgb(var(--strok));
+  background: rgb(var(--secodary-background));
+  label {
+    height: 36px;
+    position: relative;
+    span {
+      color: rgb(var(--secondary-text));
+      position: absolute;
+      left: 8px;
+      top: 0;
+      font-size: 14px;
+    }
+  }
+  input {
+    background: transparent;
+    padding: 9px 0px 7px 8px;
+  }
+  &:focus-within {
+    border-color: rgb(var(--focus-strok));
+  }
 }

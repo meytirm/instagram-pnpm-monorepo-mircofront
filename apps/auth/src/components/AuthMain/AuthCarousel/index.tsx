@@ -1,5 +1,9 @@
-function AuthCarousel() {
-  return <div className="carousel-wrapper"></div>
-}
+import SlideShow from "./SlideShow.tsx";
+const AuthCarousel = () => {
 
-export default AuthCarousel
+  return (
+    <SlideShow />
+  );
+};
+
+export default AuthCarousel;

@@ -3,7 +3,7 @@ import AuthLogin from './AuthLogin'
 
 function AuthMain() {
   return (
-    <div>
+    <div className="auth-main">
       <AuthCarousel />
       <AuthLogin />
     </div>
