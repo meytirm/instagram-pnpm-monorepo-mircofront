@@ -15,19 +15,20 @@
 
 body {
   font-size: 14px;
+  height: 100vh;
 }
 
 input:focus {
   outline: none;
 }
 
-.auth-main {
+.auth-slideshow {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.carousel-wrapper {
+.mobile-slideshow {
   height: 581.15px;
   background: url("../../../public/phone-frame.png") no-repeat;
   background-size: 468.32px 634.15px;
@@ -58,7 +59,7 @@ input:focus {
   }
 }
 
-.login-form {
+.login-auth {
   width: 350px;
   display: flex;
   flex-direction: column;

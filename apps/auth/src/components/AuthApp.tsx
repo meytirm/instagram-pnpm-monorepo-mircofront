@@ -1,11 +1,11 @@
-import AuthMain from './AuthMain'
-import AuthFooter from './AuthFooter.tsx'
+import AuthSlideshow from './AuthSlideshow'
+import FooterNavigation from './FooterNavigation.tsx'
 
 function AuthApp() {
   return (
-    <section>
-      <AuthMain />
-      <AuthFooter />
+    <section className="auth-app">
+      <AuthSlideshow />
+      <FooterNavigation />
     </section>
   )
 }
