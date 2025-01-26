@@ -7,6 +7,14 @@
   --focus-strok: 168, 168, 168;
   --secodary-background: 250, 250, 250;
   --secondary-text: 115, 115, 115;
+  --primary-button: 0, 149, 246;
+  --white: 255, 255, 255;
+  --black: 0, 0, 0;
+  --link: 0, 55, 107;
+}
+
+body {
+  font-size: 14px;
 }
 
 input:focus {
@@ -51,32 +59,87 @@ input:focus {
 }
 
 .login-form {
-  border: 1px solid rgb(var(--strok));
   width: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 48px;
+    gap: 5px;
+  }
 }
 
 .bordered-input {
   border: 1px solid rgb(var(--strok));
   background: rgb(var(--secodary-background));
-  label {
+  border-radius: 4px;
+  width: 100%;
+
+  &__label {
     height: 36px;
+    display: block;
     position: relative;
-    span {
-      color: rgb(var(--secondary-text));
-      position: absolute;
-      left: 8px;
-      top: 0;
-      font-size: 14px;
+  }
+
+  &__title {
+    color: rgb(var(--secondary-text));
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    font-size: 14px;
+    right: 100%;
+    transition: transform 0.3s;
+    width: 100%;
+    cursor: text;
+
+    &--active {
+      transform: scale(0.8) translate(-32px, -13px);
     }
   }
-  input {
+
+  &__input {
     background: transparent;
     padding: 9px 0px 7px 8px;
+    font-size: 12px;
   }
+
   &:focus-within {
     border-color: rgb(var(--focus-strok));
   }
+}
+
+.flat-button {
+  width: 100%;
+  border-radius: 8px;
+  position: relative;
+  font-size: 14px;
+  padding: 5px 0;
+  overflow: hidden;
+  &__layer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: black;
+    opacity: 0;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.1;
+    }
+  }
+
+  &__text {
+    font-weight: bold;
+  }
+}
+
+.solid-card {
+  border: 1px solid rgb(var(--strok));
 }
