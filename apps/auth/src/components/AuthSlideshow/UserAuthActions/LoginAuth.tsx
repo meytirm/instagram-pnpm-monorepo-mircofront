@@ -1,21 +1,14 @@
 import BorderedInput from '../../base/BorderedInput.tsx'
 import FlatButton from '../../base/FlatButton.tsx'
-import SolidCard from '../../base/SolidCard.tsx'
 import { useState } from 'react'
+import LogoCard from '../../base/LogoCard.tsx'
 
 function LoginAuth() {
   const [username, setUsername] = useState('')
 
   return (
-    <SolidCard className="login-auth">
-      <img
-        className="my-7"
-        width="175"
-        height="51"
-        src="/logo.png"
-        alt="instagram"
-      />
-      <div className="login-auth__wrapper">
+    <LogoCard>
+      <div className="logo-card__content my-7">
         <BorderedInput
           label="Phone number, username, or email"
           value={username}
@@ -37,7 +30,7 @@ function LoginAuth() {
           Forget password?
         </a>
       </div>
-    </SolidCard>
+    </LogoCard>
   )
 }
 

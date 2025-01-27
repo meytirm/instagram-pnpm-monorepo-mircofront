@@ -13,13 +13,29 @@
   --link: 0, 55, 107;
 }
 
+li {
+  list-style: none;
+}
+
 body {
   font-size: 14px;
   height: 100vh;
 }
 
+#root {
+  height: 100%;
+}
+
 input:focus {
   outline: none;
+}
+
+.auth-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
 }
 
 .auth-slideshow {
@@ -34,6 +50,7 @@ input:focus {
   background-size: 468.32px 634.15px;
   flex-basis: 468.32px;
   position: relative;
+  width: 500px;
 }
 
 .slideshow {
@@ -59,19 +76,27 @@ input:focus {
   }
 }
 
-.login-auth {
+.logo-card {
   width: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  &__wrapper {
+  &__logo {
+    @apply mt-7
+  }
+  &__content {
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 100%;
-    padding: 0 48px;
+    padding: 0 40px;
     gap: 5px;
+  }
+  &__help {
+    color: rgb(var(--secondary-text));
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
   }
 }
 
@@ -143,4 +168,35 @@ input:focus {
 
 .solid-card {
   border: 1px solid rgb(var(--strok));
+}
+
+.footer {
+  font-size: 13px;
+  color: rgb(var(--secondary-text));
+  font-weight: 400;
+}
+
+.footer-list {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-copy-right {
+  margin-top: 15px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.signup-description {
+  text-align: center;
+  word-break: break-word;
+  word-wrap: break-word;
+  white-space: pre-line;
+  color: rgb(var(--secondary-text));
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 5px;
 }

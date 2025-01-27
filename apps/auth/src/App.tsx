@@ -1,10 +1,11 @@
-import AuthApp from './components/AuthApp.tsx'
+import RouterComponent from './routes'
+import { BrowserRouter } from 'react-router'
 
 function App() {
   return (
-    <>
-      <AuthApp />
-    </>
+    <BrowserRouter>
+      <RouterComponent />
+    </BrowserRouter>
   )
 }
 

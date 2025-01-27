@@ -1,12 +1,12 @@
 import LoginAuth from './LoginAuth.tsx'
-import RegisterLink from './RegisterLink.tsx'
+import RegisterOrLoginLink from './RegisterOrLoginLink.tsx'
 import DownloadApp from './DownloadApp.tsx'
 
 function UserAuthActions() {
   return (
     <div>
       <LoginAuth />
-      <RegisterLink />
+      <RegisterOrLoginLink isRegister />
       <DownloadApp />
     </div>
   )
