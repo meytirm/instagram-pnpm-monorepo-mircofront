@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react'
 import { add } from '@mono/utils'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import HomePage from '../pages/HomePage.tsx'
 
 const Login = lazy(() => import('auth/Login'))
 const Signup = lazy(() => import('auth/Signup'))
@@ -10,7 +11,7 @@ function App() {
     <Router>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route path="/" element={<div>hello</div>} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
         </Routes>
