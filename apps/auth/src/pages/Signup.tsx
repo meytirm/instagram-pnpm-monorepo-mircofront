@@ -1,5 +1,5 @@
 import FooterNavigation from '../components/FooterNavigation.tsx'
-import Index from '../components/RegisterAuth'
+import Index from '../components/SignupAuth'
 
 function Signup() {
   return (

@@ -1,7 +1,11 @@
 import { useEffect, useState } from 'react'
 
 function SlideShow() {
-  const images = ['/img.png', '/img_1.png', '/img_2.png']
+  const images = [
+    'http://localhost:3001/img.png',
+    'http://localhost:3001/img_1.png',
+    'http://localhost:3001/img_2.png',
+  ]
 
   const [currentIndex, setCurrentIndex] = useState(0)
 

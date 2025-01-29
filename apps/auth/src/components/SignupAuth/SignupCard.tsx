@@ -2,8 +2,9 @@ import LogoCard from '../base/LogoCard.tsx'
 import BorderedInput from '../base/BorderedInput.tsx'
 import FlatButton from '../base/FlatButton.tsx'
 import { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 
-function RegisterCard() {
+function SignupCard() {
   const [username, setUsername] = useState('')
 
   return (
@@ -56,16 +57,18 @@ function RegisterCard() {
             .
           </div>
         </div>
-        <FlatButton
-          className="mt-2 mb-10"
-          color="--primary-button"
-          textColor="--white"
-        >
-          Log in
-        </FlatButton>
+        <NavLink to="/" className="w-full">
+          <FlatButton
+            className="mt-2 mb-10"
+            color="--primary-button"
+            textColor="--white"
+          >
+            sign up
+          </FlatButton>
+        </NavLink>
       </div>
     </LogoCard>
   )
 }
 
-export default RegisterCard
+export default SignupCard

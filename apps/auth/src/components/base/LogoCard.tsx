@@ -6,7 +6,7 @@ function LogoCard({ children }: Props) {
     <SolidCard className="logo-card">
       <img
         className="logo-card__logo"
-        src="/logo.png"
+        src="http://localhost:3001/logo.png"
         alt="instagram"
         width="175"
         height="51"

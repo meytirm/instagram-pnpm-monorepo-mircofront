@@ -2,6 +2,7 @@ import BorderedInput from '../../base/BorderedInput.tsx'
 import FlatButton from '../../base/FlatButton.tsx'
 import { useState } from 'react'
 import LogoCard from '../../base/LogoCard.tsx'
+import { NavLink } from 'react-router-dom'
 
 function LoginAuth() {
   const [username, setUsername] = useState('')
@@ -19,13 +20,15 @@ function LoginAuth() {
           value={username}
           onInput={setUsername}
         />
-        <FlatButton
-          className="mt-2"
-          color="--primary-button"
-          textColor="--white"
-        >
-          Log in
-        </FlatButton>
+        <NavLink to="/" className="w-full" end>
+          <FlatButton
+            className="mt-2"
+            color="--primary-button"
+            textColor="--white"
+          >
+            Log in
+          </FlatButton>
+        </NavLink>
         <a className="text-link my-5" href="#">
           Forget password?
         </a>
