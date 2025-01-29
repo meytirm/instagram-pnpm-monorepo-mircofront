@@ -4,7 +4,7 @@
 - **Shell**: The main container app that integrates remote components (like `auth`).
 - **Auth**: A remote app that handles authentication (e.g., login, signup).
 
-```bash
+```
 pnpm install
 npm run build
 npm run serve
