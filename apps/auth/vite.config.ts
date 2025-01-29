@@ -4,8 +4,11 @@ import federation from '@originjs/vite-plugin-federation'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/',
   build: {
     target: 'esnext',
+    minify: false,
+    cssCodeSplit: false,
   },
   esbuild: {
     target: 'esnext',
@@ -21,9 +24,10 @@ export default defineConfig({
       name: 'auth',
       filename: 'remoteEntry.js',
       exposes: {
-        './Auth': './src/App.tsx',
+        './Login': './src/pages/Login.tsx',
+        './Signup': './src/pages/Signup.tsx',
       },
-      shared: ['react', 'react-dom'],
+      shared: ['react', 'react-dom', 'react-router-dom'],
     }),
   ],
   server: {

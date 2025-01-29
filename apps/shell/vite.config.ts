@@ -4,6 +4,7 @@ import federation from '@originjs/vite-plugin-federation'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/',
   build: {
     target: 'esnext',
   },
@@ -22,7 +23,7 @@ export default defineConfig({
       remotes: {
         auth: 'http://localhost:3001/assets/remoteEntry.js',
       },
-      shared: ['react', 'react-dom'],
+      shared: ['react', 'react-dom', 'react-router-dom'],
     }),
   ],
   server: {
