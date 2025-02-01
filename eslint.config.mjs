@@ -30,4 +30,8 @@ export default [
       'react/react-in-jsx-scope': 'off', // Disable the rule that requires React to be in scope
     },
   },
+  {
+    // Note: there should be no other properties in this object
+    ignores: ['**/dist', '**/node_modules'],
+  },
 ]
