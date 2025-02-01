@@ -2,7 +2,7 @@ import SignupOrLoginLink from '../AuthSlideshow/UserAuthActions/SignupOrLoginLin
 import DownloadApp from '../AuthSlideshow/UserAuthActions/DownloadApp.tsx'
 import SignupCard from './SignupCard.tsx'
 
-function Index() {
+function SignupAuth() {
   return (
     <div>
       <SignupCard />
@@ -12,4 +12,4 @@ function Index() {
   )
 }
 
-export default Index
+export default SignupAuth

@@ -1,8 +1,8 @@
 import BorderedInput from '../../base/BorderedInput.tsx'
-import FlatButton from '../../base/FlatButton.tsx'
 import { useState } from 'react'
 import LogoCard from '../../base/LogoCard.tsx'
 import { NavLink } from 'react-router-dom'
+import { FlatButton } from '@mono/ui'
 
 function LoginAuth() {
   const [username, setUsername] = useState('')

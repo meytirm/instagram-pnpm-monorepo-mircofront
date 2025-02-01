@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import BaseButton from '../../base/BaseButton.tsx'
 
 function FlatButton({
   children,
@@ -7,7 +8,7 @@ function FlatButton({
   color = '--white',
 }: Props) {
   return (
-    <button
+    <BaseButton
       className={`flat-button ${className}`}
       style={{ background: `rgb(var(${color}))` }}
     >
@@ -18,7 +19,7 @@ function FlatButton({
       >
         {children}
       </div>
-    </button>
+    </BaseButton>
   )
 }
 

@@ -1,10 +1,10 @@
 import FooterNavigation from '../components/FooterNavigation.tsx'
-import Index from '../components/SignupAuth'
+import SignupAuth from '../components/SignupAuth'
 
 function Signup() {
   return (
     <section className="auth-app">
-      <Index />
+      <SignupAuth />
       <FooterNavigation />
     </section>
   )
